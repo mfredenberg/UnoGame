@@ -98,15 +98,16 @@ public class UnoGameState extends GameState {
         this.discardPile = new Deck(masterGameState.getDiscardPile());
 
         //copying players ahdn
-        this.playerHands.add((ArrayList<Card>)(masterGameState.getPlayerHands().get(0).clone());
-        this.playerHands.add((ArrayList<Card>)(masterGameState.getPlayerHands().get(1).clone());
+        this.playerHands.add((ArrayList<Card>)(masterGameState.getPlayerHands().get(playerID).clone());
+        this.playerHands.add(new ArrayList<Card>());
 
-
-
+        for(Card card: masterGameState.getPlayerHands().get((playerID+1)%2))
+        {
+            this.playerHands.get((playerID+1)%2).add(null);
+        }
 
         //copying color
         this.currentColor = discardPile.take().getColor();
-
 
         //copying gameDirection
         this.gameDirection = masterGameState.gameDirection;
