@@ -31,12 +31,17 @@ public class Deck {
                 this.deck.add(new Card(color, type));
                 if (type == Type.ZERO) break;
                 this.deck.add(new Card(color, type));
-                if (!(type == Type.WILD || type == Type.WILDDRAW4)) break;
+                if (type != Type.WILD || type != Type.WILDDRAW4) break;
                 this.deck.add(new Card(color, type));
                 this.deck.add(new Card(color, type));
             }
 
         }
+        do{
+            suffle();
+        }while (this.deck.get(0).getType() != Type.WILD || this.deck.get(0).getType() != Type.WILDDRAW4);
+
+
     }
 
     /*
