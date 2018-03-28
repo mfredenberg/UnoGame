@@ -90,7 +90,7 @@ public class UnoGameState extends GameState {
 
         this.playerHands = new ArrayList<>();
 
-        // telling the game state whose turn it is
+        // telling the game state whose turn izt is
         this.turn = playerID;
 
         // copying decks
