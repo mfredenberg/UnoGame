@@ -20,7 +20,7 @@ public class Deck {
 
     //holds the deck of cards
     private ArrayList<Card> deck = new ArrayList<Card>();
-
+//
 
     /*
     * method adds all uno cards into the deck
