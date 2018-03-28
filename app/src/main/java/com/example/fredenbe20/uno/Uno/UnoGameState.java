@@ -98,8 +98,8 @@ public class UnoGameState extends GameState {
         this.discardPile = new Deck(masterGameState.getDiscardPile());
 
         //copying players ahdn
-        this.playerHands.add((ArrayList<Card>)(masterGameState.getPlayerHands().get(0).clone());
-        this.playerHands.add((ArrayList<Card>)(masterGameState.getPlayerHands().get(1).clone());
+        this.playerHands.add((ArrayList<Card>)(masterGameState.getPlayerHands().get(0).clone()));
+        this.playerHands.add((ArrayList<Card>)(masterGameState.getPlayerHands().get(1).clone()));
 
 
 
