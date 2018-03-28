@@ -13,7 +13,7 @@ import java.util.Random;
  * @author Stelios Papoutsakis
  * @author Chris Fishback
  * @author Alli Jacobs
- * @author Mason Fredenzberg
+ * @author Mason Fredenzgit clean  -d  -f ""berg
  */
 
 public class Deck {
