@@ -22,9 +22,9 @@ import android.widget.TabHost.TabSpec;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
+import com.example.fredenbe20.uno.R;
 import com.example.fredenbe20.uno.game.config.GameConfig;
 import com.example.fredenbe20.uno.game.config.GamePlayerType;
 import com.example.fredenbe20.uno.game.util.IPCoder;

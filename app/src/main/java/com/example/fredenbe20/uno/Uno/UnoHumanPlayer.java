@@ -11,6 +11,10 @@ import com.example.fredenbe20.uno.game.infoMsg.GameInfo;
  */
 
 public class UnoHumanPlayer extends GameHumanPlayer {
+
+    public UnoHumanPlayer(String name){
+        super(name);
+    }
     @Override
     public void setAsGui(GameMainActivity activity) {
 
