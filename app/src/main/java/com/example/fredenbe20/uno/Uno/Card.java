@@ -14,25 +14,29 @@ package com.example.fredenbe20.uno.Uno;
 
 public class Card {
 
-    //description variables for the card
-    private int cardVal; //1-9: numbers, 10: skip, 11: reverse,
-    //12: draw2, 13: wild, 14: wild draw 4
-    private String color;
 
-    public Card(int cardVal, String color)
+
+    //description variables for the card
+    private Color color; //1-9: numbers, 10: skip, 11: reverse,
+    //12: draw2, 13: wild, 14: wild draw 4
+    private Type type;
+
+    public Card(Color color, Type type)
     {
-        this.cardVal = cardVal;
         this.color = color;
+        this.type = type;
     }
 
     //getters
-    public int getCardVal() {
-        return cardVal;
-    }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
+
+    public Type getType() {
+        return type;
+    }
+
 
 
 }
