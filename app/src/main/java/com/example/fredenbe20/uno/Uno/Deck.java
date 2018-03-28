@@ -20,7 +20,16 @@ public class Deck {
 
     //holds the deck of cards
     private ArrayList<Card> deck = new ArrayList<Card>();
-//
+
+
+    public Deck(){};
+    public Deck(Deck deck)
+    {
+        for(Card card: deck.getDeck())
+        {
+            this.deck.add(new Card(card.getColor(),card.getType()));
+        }
+    }
 
     /*
     * method adds all uno cards into the deck

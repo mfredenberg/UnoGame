@@ -29,6 +29,7 @@ import com.example.fredenbe20.uno.game.config.GameConfig;
 import com.example.fredenbe20.uno.game.config.GamePlayerType;
 import com.example.fredenbe20.uno.game.util.IPCoder;
 import com.example.fredenbe20.uno.game.util.MessageBox;
+import com.example.fredenbe20.uno.R;
 
 /**
  * class GameMainActivity
