@@ -25,10 +25,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import edu.up.cs301.game.config.GameConfig;
-import edu.up.cs301.game.config.GamePlayerType;
-import edu.up.cs301.game.util.IPCoder;
-import edu.up.cs301.game.util.MessageBox;
+import com.example.fredenbe20.uno.game.config.GameConfig;
+import com.example.fredenbe20.uno.game.config.GamePlayerType;
+import com.example.fredenbe20.uno.game.util.IPCoder;
+import com.example.fredenbe20.uno.game.util.MessageBox;
 
 /**
  * class GameMainActivity

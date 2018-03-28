@@ -1,6 +1,6 @@
 package com.example.fredenbe20.uno.game.config;
 
-import edu.up.cs301.game.GamePlayer;
+import com.example.fredenbe20.uno.game.GamePlayer;
 
 /**
  * class GamePlayerType
