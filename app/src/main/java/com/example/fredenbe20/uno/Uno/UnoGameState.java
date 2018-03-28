@@ -1,5 +1,7 @@
 package com.example.fredenbe20.uno.Uno;
 
+import com.example.fredenbe20.uno.game.infoMsg.GameState;
+
 import java.util.ArrayList;
 
 /**
@@ -15,7 +17,7 @@ import java.util.ArrayList;
  * @author Mason Fredenberg
  */
 
-public class UnoGameState {
+public class UnoGameState extends GameState{
     //Different groupings of cards
     private ArrayList<Card> player1Hand = new ArrayList<Card>();
     private ArrayList<Card> player2Hand = new ArrayList<Card>();
