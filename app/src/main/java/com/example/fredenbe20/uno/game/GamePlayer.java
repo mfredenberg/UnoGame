@@ -1,6 +1,6 @@
 package com.example.fredenbe20.uno.game;
 
-import edu.up.cs301.game.infoMsg.GameInfo;
+import com.example.fredenbe20.uno.game.infoMsg.GameInfo;
 
 /**
  * A player who plays a (generic) game. Each class that implements a player for

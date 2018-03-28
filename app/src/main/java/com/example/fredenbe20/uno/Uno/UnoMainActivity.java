@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.fredenbe20.uno.R;
 
-public class UnoMainActivity extends AppCompatActivity {
+public class UnoMainActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

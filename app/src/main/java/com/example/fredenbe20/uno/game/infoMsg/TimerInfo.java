@@ -1,6 +1,6 @@
 package com.example.fredenbe20.uno.game.infoMsg;
 
-import edu.up.cs301.game.util.GameTimer;
+import com.example.fredenbe20.uno.game.util.GameTimer;
 
 /**
  * The a message from to a player (typically sent by a timer) that the timer's
