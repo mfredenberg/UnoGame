@@ -21,13 +21,15 @@ public class Deck {
     //holds the deck of cards
     private ArrayList<Card> deck = new ArrayList<Card>();
 
+    // default constructor
+    public Deck() {
+    }
 
-    public Deck(){};
-    public Deck(Deck deck)
-    {
-        for(Card card: deck.getDeck())
-        {
-            this.deck.add(new Card(card.getColor(),card.getType()));
+
+// deep copy constructor
+    public Deck(Deck deck) {
+        for (Card card : deck.getDeck()) {
+            this.deck.add(new Card(card.getColor(), card.getType()));
         }
     }
 
@@ -37,18 +39,22 @@ public class Deck {
     public void add108() {
         for (Color color : Color.values()) {
             for (Type type : Type.values()) {
-                this.deck.add(new Card(color, type));
-                if (type == Type.ZERO) break;
-                this.deck.add(new Card(color, type));
-                if (type != Type.WILD || type != Type.WILDDRAW4) break;
-                this.deck.add(new Card(color, type));
-                this.deck.add(new Card(color, type));
+                if (type != Type.WILD || type != Type.WILDDRAW4) {
+                    this.deck.add(new Card(color, type));
+                    if (type != Type.ZERO) {
+                        this.deck.add(new Card(color, type));
+                    }
+
+                }
+                this.deck.add(new Card(null, type));
+
             }
 
         }
-        do{
+        do {
             suffle();
-        }while (this.deck.get(0).getType() != Type.WILD || this.deck.get(0).getType() != Type.WILDDRAW4);
+        }
+        while (this.deck.get(0).getType() != Type.WILD || this.deck.get(0).getType() != Type.WILDDRAW4);
 
 
     }
