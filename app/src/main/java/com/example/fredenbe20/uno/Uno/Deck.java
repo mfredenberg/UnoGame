@@ -13,7 +13,7 @@ import java.util.Random;
  * @author Stelios Papoutsakis
  * @author Chris Fishback
  * @author Alli Jacobs
- * @author Mason Fredenberg
+ * @author Mason Fredenzberg
  */
 
 public class Deck {
