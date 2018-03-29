@@ -10,6 +10,17 @@ import com.example.fredenbe20.uno.game.actionMsg.GameAction;
 
 public class UnoLocalGame extends LocalGame {
 
+
+    private UnoGameState currentGameState; // current state
+
+   /*
+   Ctor called at begining of game that initializes the game state to a new game
+    */
+    public UnoLocalGame()
+    {
+        this.currentGameState = new UnoGameState();
+    }
+
     @Override
     protected void sendUpdatedStateTo(GamePlayer p) {
 
@@ -29,4 +40,8 @@ public class UnoLocalGame extends LocalGame {
     protected boolean makeMove(GameAction action) {
         return false;
     }
+
+
+
+
 }

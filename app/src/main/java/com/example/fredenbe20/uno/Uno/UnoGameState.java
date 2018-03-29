@@ -30,6 +30,7 @@ public class UnoGameState extends GameState {
     //current turn, starting at 0
     private int turn;
 
+
     // color of the center card
     private Color currentColor;
 
@@ -93,16 +94,16 @@ public class UnoGameState extends GameState {
         this.discardPile = new Deck(masterGameState.getDiscardPile());
 
         //copying other players hand, filling the values in the master array with nulls
-        for (int i = 0; i < masterGameState.getPlayerHands().size() - 1; i++) {
+        for (int i = 1; i < masterGameState.getNumPlayers(); i++) {
             this.playerHands.add(new ArrayList<Card>());
-            for (Card card : masterGameState.getPlayerHands().get((playerID + 1) % masterGameState.getPlayerHands().size())) {
-                this.playerHands.get((playerID + 1) % 2).add(null);
+            for(int j = 0; j < masterGameState.getPlayerHandSize(playerID + i % masterGameState.getNumPlayers());j++) {
+                this.playerHands.get(playerID + i % masterGameState.getNumPlayers()).add(null);
             }
         }
 
 
         // copying the current players hand
-        this.playerHands.add(playerID, (ArrayList<Card>) (masterGameState.getPlayerHands().get(playerID).clone()));
+        this.playerHands.add(playerID, (ArrayList<Card>) (masterGameState.getCurrentPlayerHand().clone()));
 
 
         //copying color
@@ -274,12 +275,35 @@ public class UnoGameState extends GameState {
     }
 
 
-    public ArrayList<ArrayList<Card>> getPlayerHands() {
-        return playerHands;
-    }
-
     public Deck getDiscardPile() {
         return discardPile;
     }
+
+    public Color getCurrentColor() {
+        return currentColor;
+    }
+
+    public void setCurrentColor(Color currentColor) {
+        this.currentColor = currentColor;
+    }
+
+    public int getPlayerHandSize(int playerID) {
+        return this.playerHands.get(playerID).size();
+    }
+
+    public ArrayList<Card> getCurrentPlayerHand()
+    {
+        return this.playerHands.get(this.turn);
+    }
+
+    public int getNumPlayers() {
+        return this.playerHands.size();
+    }
+
+    public String getPlayerNames(int playerID) {
+        return this.playerNames.get(playerID);
+    }
+
+
 }
 
